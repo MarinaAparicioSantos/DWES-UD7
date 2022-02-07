@@ -1,6 +1,5 @@
 <?php
 
-
 function getConnection()
 {
 
@@ -27,3 +26,6 @@ function getCiudad($numero)
     $db = null;
     return $ciudades;
 }
+
+
+?>
