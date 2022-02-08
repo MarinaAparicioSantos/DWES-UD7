@@ -26,6 +26,4 @@ function getCiudad($numero)
     $db = null;
     return $ciudades;
 }
-
-
 ?>

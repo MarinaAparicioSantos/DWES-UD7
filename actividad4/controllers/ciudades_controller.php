@@ -1,6 +1,8 @@
 <?php
 
-function mostrarCiudad(){
+function mostrarCiudadServidor(){
+
+    require "./models/ciudades_model.php";
 
 
 // Instanciamos un nuevo servidor SOAP

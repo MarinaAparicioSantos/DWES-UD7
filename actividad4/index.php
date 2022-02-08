@@ -2,9 +2,9 @@
 
 define ("CONTROLLERS_FOLDER","controllers/");
 
-define ("DEFAULT_CONTROLLER","ciudadesCli");
+define ("DEFAULT_CONTROLLER","ciudades");
 
-define ("DEFAULT_ACTION","mostrarCiudad");
+define ("DEFAULT_ACTION","mostrarCiudadServidor");
 
 $controller = DEFAULT_CONTROLLER;
 if (!empty ($_GET['controller']))

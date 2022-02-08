@@ -15,6 +15,5 @@
         print "<p>$resultado</p>";
     ?>
     </form>
-    <div id="footer">Creado con <span class="red">♥</span> por: <a href="https://www.raulprietofernandez.net/">Raúl Prieto Fernández</a></div>
 </body>
 </html>

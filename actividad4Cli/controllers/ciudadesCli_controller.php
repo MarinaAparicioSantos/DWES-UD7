@@ -2,16 +2,13 @@
 
 function mostrarCiudad()
 {
-    // Vaciamos algunas variables
+
     $error = "";
     $resultado = "";
     $poblacion = "";
 
-    // Iniciamos el cliente SOAP
-    // Escribimos la dirección donde se encuentra el servicio
-    // $url = "https://www.raulprietofernandez.net/images/blog/211/DNI/calcularLetra.php";
-    $url = "http://localhost/DWES-UD7/actividad4/index.php?controller=ciudades&action=mostrarCiudad";
-    // $uri = "https://www.raulprietofernandez.net/images/blog/211/DNI/";
+    $url = "http://localhost/DWES-UD7/actividad4/index.php?controller=ciudades&action=mostrarCiudadServidor";
+
     $uri = "http://localhost/DWES-UD7/actividad4/";
     $cliente = new SoapClient(null, array('location' => $url, 'uri' => $uri));
 
@@ -30,4 +27,7 @@ function mostrarCiudad()
             $error = "<strong>Error:</strong> Debes introducir un numero correcto<br/><br/>";
         }
     }
+
+
+    include "./views/mostrarCiudades.php";
 }
