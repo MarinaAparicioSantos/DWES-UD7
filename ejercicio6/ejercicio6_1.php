@@ -1,6 +1,6 @@
 <?php
 
-//suma
+//divide
 
 $wsdl = 'https://www.crcind.com/csp/samples/SOAP.Demo.CLS?WSDL'; //URL de nuestro servicio soap
 
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //Enviamos el Request
 $soap = new SoapClient($wsdl, $options);
-$result = $soap->AddInteger($params)->AddIntegerResult; //Aquí cambiamos dependiendo de la acción del servicio que necesitemos ejecutar
+$result = $soap->DivideInteger($params)->DivideIntegerResult; //Aquí cambiamos dependiendo de la acción del servicio que necesitemos ejecutar
 echo $result;
 }
 ?>

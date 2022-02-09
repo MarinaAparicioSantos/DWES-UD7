@@ -1,6 +1,6 @@
 <?php
 
-//suma
+//divide
 
 $wsdl = 'https://www.crcind.com/csp/samples/SOAP.Demo.CLS?WSDL'; //URL de nuestro servicio soap
 
@@ -8,8 +8,7 @@ $wsdl = 'https://www.crcind.com/csp/samples/SOAP.Demo.CLS?WSDL'; //URL de nuestr
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$params = array(
-		"Arg1" => $_POST["numero1"],
-		"Arg2" => $_POST["numero2"]
+		"id" => $_POST["idPersona"],
 	);
 
 	$options = array(
@@ -26,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //Enviamos el Request
 $soap = new SoapClient($wsdl, $options);
-$result = $soap->AddInteger($params)->AddIntegerResult; //Aquí cambiamos dependiendo de la acción del servicio que necesitemos ejecutar
+$result = $soap->FindPerson($params)->FindPersonResult; //Aquí cambiamos dependiendo de la acción del servicio que necesitemos ejecutar
 echo $result;
 }
 ?>
@@ -41,8 +40,7 @@ echo $result;
 <body>
 	<form action="" method="post">
 		<?php
-		print "<input type='number' name='numero1'>";
-		print "<input type='number' name='numero2'>";
+		print "<input type='number' name='idPersona'>";
 		print "<input type='submit' name='enviar' value='enviar'>";
 		?>
 	</form>
